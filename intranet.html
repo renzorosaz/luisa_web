@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Panel de Control de la Intranet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4F46E5",
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#151121",
+                        "text-light-primary": "#111827",
+                        "text-light-secondary": "#6B7280",
+                        "text-dark-primary": "#FFFFFF",
+                        "text-dark-secondary": "#9CA3AF",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1F2937",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="flex h-full grow">
+<!-- SideNavBar -->
+<aside class="flex h-screen min-h-[700px] w-64 flex-col justify-between border-r border-border-light bg-card-light p-4 dark:border-border-dark dark:bg-card-dark sticky top-0">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-primary" data-alt="Company logo"></div>
+<div class="flex flex-col">
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-base font-bold leading-normal">CoachPro Inc.</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Intranet</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary" href="#">
+<span class="material-symbols-outlined fill">home</span>
+<p class="text-sm font-bold leading-normal">Inicio</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<p class="text-sm font-medium leading-normal">Anuncios</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-sm font-medium leading-normal">Documentos</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">school</span>
+<p class="text-sm font-medium leading-normal">Cursos</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">construction</span>
+<p class="text-sm font-medium leading-normal">Herramientas</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<p class="text-sm font-medium leading-normal">Calendario</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1 border-t border-border-light pt-4 dark:border-border-dark">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-sm font-medium leading-normal">Perfil</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1">
+<!-- Toolbar -->
+<header class="sticky top-0 z-10 flex justify-between gap-2 border-b border-border-light bg-card-light/80 p-4 backdrop-blur-sm dark:border-border-dark dark:bg-card-dark/80">
+<div class="relative flex-1 max-w-md">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary">search</span>
+</div>
+<input class="block w-full rounded-lg border-border-light bg-background-light p-2 pl-10 text-sm text-text-light-primary dark:border-border-dark dark:bg-background-dark dark:text-text-dark-primary dark:placeholder-gray-400" placeholder="Buscar en la intranet..." type="search"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="rounded-full p-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="rounded-full p-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="rounded-full p-2 text-text-light-secondary hover:bg-gray-100 dark:text-text-dark-secondary dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-4 h-10 text-sm font-bold text-white">
+<span class="material-symbols-outlined fill text-base">add_circle</span>
+<span class="truncate">Crear Anuncio</span>
+</button>
+</div>
+</header>
+<div class="p-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 pb-8">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-text-light-primary dark:text-text-dark-primary">Hola, Ana</p>
+<p class="text-base font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">Bienvenida al Panel de Control de la Intranet.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+<!-- Main Content Area -->
+<div class="lg:col-span-2">
+<!-- SectionHeader -->
+<h2 class="px-1 pb-3 pt-2 text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Anuncios Recientes</h2>
+<div class="flex flex-col gap-6">
+<!-- Card 1 -->
+<div class="rounded-xl border border-border-light bg-card-light p-4 dark:border-border-dark dark:bg-card-dark @container">
+<div class="flex flex-col items-stretch justify-start @xl:flex-row @xl:items-start">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract gradient image for a product launch" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCQ980vnHVPWY2yUbzFYQe4I8V4mX-7Iy0d_EE3sr2iwbgCcAMUGbrYY2Zx1fPUwBB499u3Y1J4hcYYm8Qjck_VeirFgcWJw4pwMNtf29G9oYimpEZRuGJGGif_nCfKLNSqcksqRBM9D_dgxRr1rCI5lk4w-RBxDcO2H-9ee-iRvt0zs4o8bVYc_qeune37PFaBcnxwGFTF10JwMDIwH55aXngIhzw9aSGgE9zRckMGt3aB9JRAwbsIOuRqdIYMYKKGuY-3UfKCAgx");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 py-4 @xl:px-4">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Lanzamiento del Nuevo Curso de Liderazgo</p>
+<div class="flex items-end justify-between gap-3">
+<div class="flex flex-col gap-2">
+<p class="text-base font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">Estamos emocionados de anunciar el lanzamiento de nuestro nuevo curso diseñado para futuros líderes. ¡Inscríbete ya!</p>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">Hace 2 días</p>
+</div>
+<button class="flex h-9 min-w-[84px] max-w-[480px] shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-medium text-white">
+<span class="truncate">Leer más</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-xl border border-border-light bg-card-light p-4 dark:border-border-dark dark:bg-card-dark @container">
+<div class="flex flex-col items-stretch justify-start @xl:flex-row @xl:items-start">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Image of a team collaborating for an internal policy update" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTCwfItB1BKnU1oRQl2tr7Bs23K3Qj2ZnjvsnAHpCKy1difd86XusQrx4b6EoPwES_RWRuTNlvsozCEjLYHmWPdXBG4ieY4SX_aIVXW2yB6jEiODuFhAdOmt0dK61Dss2GlgIoxBZrme4Aa9x9sNPPIA7Hu1feGincrXK2b4SC9U9VWR1uZCJOygd4-tQkAHYpFcvoP_Gz3wg_qqNZJWU3pZAILGQkO0qaFKqU79hIQn4MIdur5694IPu4I549E4Wmv33wNHNPcqSI");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 py-4 @xl:px-4">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Actualización de Políticas de Trabajo Remoto</p>
+<div class="flex items-end justify-between gap-3">
+<div class="flex flex-col gap-2">
+<p class="text-base font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">Se han actualizado las guías y políticas para el trabajo remoto. Por favor, revisa el documento en la sección de políticas.</p>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">Hace 1 semana</p>
+</div>
+<button class="flex h-9 min-w-[84px] max-w-[480px] shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-medium text-white">
+<span class="truncate">Leer más</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Documentos Recientes -->
+<h2 class="px-1 pb-3 pt-8 text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Documentos Recientes</h2>
+<div class="rounded-xl border border-border-light bg-card-light dark:border-border-dark dark:bg-card-dark">
+<ul class="divide-y divide-border-light dark:divide-border-dark">
+<li class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">picture_as_pdf</span>
+<div class="flex flex-col">
+<span class="font-medium text-text-light-primary dark:text-text-dark-primary">Guía de Marketing Digital 2024.pdf</span>
+<span class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Subido hace 3 horas</span>
+</div>
+</div>
+<button class="rounded-full p-2 text-text-light-secondary hover:bg-gray-200 dark:text-text-dark-secondary dark:hover:bg-gray-600">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</li>
+<li class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">article</span>
+<div class="flex flex-col">
+<span class="font-medium text-text-light-primary dark:text-text-dark-primary">Plan de Contenidos Q3.docx</span>
+<span class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Modificado ayer</span>
+</div>
+</div>
+<button class="rounded-full p-2 text-text-light-secondary hover:bg-gray-200 dark:text-text-dark-secondary dark:hover:bg-gray-600">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</li>
+<li class="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">drive_spreadsheet</span>
+<div class="flex flex-col">
+<span class="font-medium text-text-light-primary dark:text-text-dark-primary">Reporte de Ventas Mayo.xlsx</span>
+<span class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Subido hace 2 días</span>
+</div>
+</div>
+<button class="rounded-full p-2 text-text-light-secondary hover:bg-gray-200 dark:text-text-dark-secondary dark:hover:bg-gray-600">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+<!-- Sidebar Content Area -->
+<div class="lg:col-span-1">
+<!-- Quick Access -->
+<h2 class="px-1 pb-3 pt-2 text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Accesos Rápidos</h2>
+<div class="grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center gap-2 rounded-xl border border-border-light bg-card-light p-4 text-center text-text-light-primary hover:bg-gray-50 dark:border-border-dark dark:bg-card-dark dark:text-text-dark-primary dark:hover:bg-gray-700/50" href="#">
+<span class="material-symbols-outlined text-3xl text-primary">upload_file</span>
+<span class="text-sm font-semibold">Subir Documento</span>
+</a>
+<a class="flex flex-col items-center gap-2 rounded-xl border border-border-light bg-card-light p-4 text-center text-text-light-primary hover:bg-gray-50 dark:border-border-dark dark:bg-card-dark dark:text-text-dark-primary dark:hover:bg-gray-700/50" href="#">
+<span class="material-symbols-outlined text-3xl text-primary">add_comment</span>
+<span class="text-sm font-semibold">Crear Anuncio</span>
+</a>
+<a class="flex flex-col items-center gap-2 rounded-xl border border-border-light bg-card-light p-4 text-center text-text-light-primary hover:bg-gray-50 dark:border-border-dark dark:bg-card-dark dark:text-text-dark-primary dark:hover:bg-gray-700/50" href="#">
+<span class="material-symbols-outlined text-3xl text-primary">monitoring</span>
+<span class="text-sm font-semibold">Acceder a CRM</span>
+</a>
+<a class="flex flex-col items-center gap-2 rounded-xl border border-border-light bg-card-light p-4 text-center text-text-light-primary hover:bg-gray-50 dark:border-border-dark dark:bg-card-dark dark:text-text-dark-primary dark:hover:bg-gray-700/50" href="#">
+<span class="material-symbols-outlined text-3xl text-primary">task</span>
+<span class="text-sm font-semibold">Ver Tareas</span>
+</a>
+</div>
+<!-- Calendar Widget -->
+<h2 class="px-1 pb-3 pt-8 text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Calendario</h2>
+<div class="rounded-xl border border-border-light bg-card-light p-4 dark:border-border-dark dark:bg-card-dark">
+<div class="flex items-center justify-between">
+<button class="rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined">chevron_left</span></button>
+<p class="font-bold text-text-light-primary dark:text-text-dark-primary">Julio 2024</p>
+<button class="rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm text-text-light-secondary dark:text-text-dark-secondary mt-4">
+<span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm text-text-light-primary dark:text-text-dark-primary mt-2">
+<span class="text-text-light-secondary dark:text-text-dark-secondary"></span><span class="text-text-light-secondary dark:text-text-dark-secondary"></span><span>1</span><span>2</span><span>3</span><span class="relative"><div class="absolute inset-0 mx-auto size-7 rounded-full bg-primary/20"></div><span class="relative">4</span></span><span>5</span>
+<span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+<span>13</span><span>14</span><span class="relative"><div class="absolute inset-0 mx-auto size-7 rounded-full bg-primary text-white"></div><span class="relative">15</span></span><span>16</span><span>17</span><span>18</span><span>19</span>
+<span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span class="relative"><div class="absolute inset-0 mx-auto size-7 rounded-full bg-primary/20"></div><span class="relative">25</span></span><span>26</span>
+<span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="text-text-light-secondary dark:text-text-dark-secondary"></span><span class="text-text-light-secondary dark:text-text-dark-secondary"></span>
+</div>
+<div class="mt-4 border-t border-border-light pt-4 dark:border-border-dark">
+<div class="flex items-start gap-3">
+<div class="mt-1 h-3 w-4 shrink-0 rounded-sm bg-primary"></div>
+<div>
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">Reunión de Equipo Semanal</p>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">15 de Julio, 10:00 AM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

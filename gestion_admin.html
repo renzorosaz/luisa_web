@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestión de Cursos (Admin)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4d19e6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#151121",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col bg-white dark:bg-background-dark dark:border-r dark:border-white/10 p-4">
+<div class="flex h-full flex-col justify-between">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of the coach" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsGyhEo52ughIBKwSQ9EadAaHloZRQWaJAdGxcaroqXPlLp7yWqMQks_fBPOQDrDsV-UhIHpMrcGOSxXKz21A-3jJfPk1F7EDwetjiYP77Rwf8YSGILS0VrW6-YRgkSOZZ2gyatMpxoBAUt6xUMcPnT2qUMo4rPYNjVsETIFX6ByPWJEj3h7gKn418gC7q9h399ZLbzrBh9BsUxAJszm1UPxGGR7gnZ8OHXBHtr0dG7a4cRm6WpkEz4VKxIKMbMsLDd12B5mGocufz");'></div>
+<div class="flex flex-col">
+<h1 class="text-gray-900 dark:text-white text-base font-semibold leading-normal">Coach's Name</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Admin Panel</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">school</span>
+<p class="text-sm font-semibold leading-normal">Cursos</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined !text-2xl">receipt_long</span>
+<p class="text-sm font-medium leading-normal">Inscripciones</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined !text-2xl">group</span>
+<p class="text-sm font-medium leading-normal">Estudiantes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined !text-2xl">settings</span>
+<p class="text-sm font-medium leading-normal">Configuración</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 rounded-lg" href="#">
+<span class="material-symbols-outlined !text-2xl">logout</span>
+<p class="text-sm font-medium leading-normal">Cerrar Sesión</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="mx-auto flex max-w-7xl flex-col gap-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-tight">Gestión de Cursos</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Añade, edita, y gestiona el contenido de tus cursos.</p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-sm hover:bg-primary/90">
+<span class="material-symbols-outlined !text-xl">add_circle</span>
+<span class="truncate">Añadir Nuevo Curso</span>
+</button>
+</div>
+<!-- SearchBar -->
+<div class="w-full max-w-md">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-white dark:bg-background-dark/80 border border-gray-200 dark:border-white/10 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+<div class="text-gray-500 dark:text-gray-400 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined !text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Buscar cursos por nombre..." value=""/>
+</div>
+</label>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<div class="inline-block min-w-full align-middle">
+<div class="overflow-hidden rounded-lg border border-gray-200 dark:border-white/10 bg-white dark:bg-background-dark/80">
+<table class="min-w-full divide-y divide-gray-200 dark:divide-white/10">
+<thead class="bg-gray-50 dark:bg-white/5">
+<tr>
+<th class="px-6 py-4 text-left text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" scope="col">Nombre del Curso</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" scope="col">Categoría</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" scope="col">Inscritos</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" scope="col">Estado</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" scope="col">Fecha de Creación</th>
+<th class="relative px-6 py-4" scope="col">
+<span class="sr-only">Acciones</span>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-white/10">
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Curso de Marketing Digital</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">Marketing</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">150</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-3 py-1 text-xs font-semibold leading-5 text-green-800 dark:text-green-300">Publicado</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">2023-10-26</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<div class="flex items-center justify-end gap-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Editar"><span class="material-symbols-outlined">edit</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500" href="#" title="Eliminar"><span class="material-symbols-outlined">delete</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Ver"><span class="material-symbols-outlined">visibility</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Introducción a las Finanzas</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">Finanzas</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">85</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-3 py-1 text-xs font-semibold leading-5 text-green-800 dark:text-green-300">Publicado</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">2023-09-15</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<div class="flex items-center justify-end gap-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Editar"><span class="material-symbols-outlined">edit</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500" href="#" title="Eliminar"><span class="material-symbols-outlined">delete</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Ver"><span class="material-symbols-outlined">visibility</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Liderazgo para Emprendedores</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">Liderazgo</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">210</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-yellow-100 dark:bg-yellow-900/50 px-3 py-1 text-xs font-semibold leading-5 text-yellow-800 dark:text-yellow-300">Borrador</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">2023-11-01</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<div class="flex items-center justify-end gap-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Editar"><span class="material-symbols-outlined">edit</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500" href="#" title="Eliminar"><span class="material-symbols-outlined">delete</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Ver"><span class="material-symbols-outlined">visibility</span></a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Productividad Personal</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">Desarrollo Personal</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">120</td>
+<td class="whitespace-nowrap px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/50 px-3 py-1 text-xs font-semibold leading-5 text-gray-800 dark:text-gray-300">Archivado</span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-600 dark:text-gray-300">2023-08-20</td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium">
+<div class="flex items-center justify-end gap-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Editar"><span class="material-symbols-outlined">edit</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500" href="#" title="Eliminar"><span class="material-symbols-outlined">delete</span></a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#" title="Ver"><span class="material-symbols-outlined">visibility</span></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

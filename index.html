@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Página de Aterrizaje Coach de Negocios</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4F46E5",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#151121",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .peer:target {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<header class="sticky top-5 z-10 mx-auto flex w-[95%] items-center justify-between whitespace-nowrap border border-solid border-slate-200/80 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:border-slate-700/80 dark:bg-background-dark/80 rounded-xl" id="home">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-50">
+<span class="material-symbols-outlined text-primary text-2xl">
+                                travel_explore
+                            </span>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Luisa Avila Bolivar</h2>
+</div>
+<div class="hidden flex-1 justify-end gap-8 md:flex">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#about">Acerca de</a>
+<a class="text-sm font-medium leading-normal text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#research">Investigación</a>
+<a class="text-sm font-medium leading-normal text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#services">Servicios</a>
+<a class="text-sm font-medium leading-normal text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#contact">Contacto</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Reservar una sesión</span>
+</button>
+</div>
+</header>
+<main class="mt-10 px-4">
+<section class="py-16 md:py-24" id="hero">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 lg:col-span-6 text-center md:text-left">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-[-0.033em] mb-4">
+                                                Transforma tu Visión en Éxito Tangible
+                                            </h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto md:mx-0 mb-8">
+                                                Como coach de negocios y profesora universitaria, te ofrezco las herramientas y la estrategia para potenciar tu liderazgo y acelerar el crecimiento de tu emprendimiento.
+                                            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-transform hover:scale-105 shadow-lg hover:shadow-primary/40 focus:outline-none focus:ring-4 focus:ring-primary/50">
+<span class="truncate">Reservar una Sesión</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-base font-bold leading-normal tracking-[0.015em] hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+<span class="truncate">Descubre Cómo Puedo Ayudarte</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-5 lg:col-span-6 flex justify-center">
+<a class="block cursor-pointer w-64 h-64 md:w-80 md:h-80 group" href="#image-modal">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-full shadow-2xl transition-transform duration-300 group-hover:scale-105 border-4 border-white dark:border-slate-800" style='background-image: url("https://dina.concytec.gob.pe/appDirectorioCTI/UploadFotoPath.do?tipo=visualizar_archivo&id_investigador=130411&ruta=/documents/docInvestigadores/130411/imagenes/Luisa%20Avila.jpg&content_type=image/jpeg");'></div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<div class="peer hidden fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-300" id="image-modal" role="dialog">
+<div class="relative max-w-3xl max-h-[90vh] w-full p-4">
+<a aria-label="Cerrar modal" class="absolute inset-0 cursor-default" href="#hero"></a>
+<img alt="Retrato profesional de Luisa Adriana Avila Bolivar de Andrade Piedra" class="block w-full h-full object-contain rounded-xl shadow-2xl" src="https://dina.concytec.gob.pe/appDirectorioCTI/UploadFotoPath.do?tipo=visualizar_archivo&id_investigador=130411&ruta=/documents/docInvestigadores/130411/imagenes/Luisa%20Avila.jpg&content_type=image/jpeg"/>
+<a aria-label="Cerrar" class="absolute -top-3 -right-3 flex items-center justify-center h-10 w-10 bg-white dark:bg-slate-800 rounded-full shadow-lg text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" href="#hero">
+<span class="material-symbols-outlined">close</span>
+</a>
+</div>
+</div>
+<section class="py-16 md:py-24" id="about">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5">
+<div class="relative">
+<div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-8 text-center shadow-lg transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">format_quote</span>
+<blockquote class="text-xl italic font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+                                            "Enseñar es encender una pasión por el conocimiento y guiar a otros a convertirse en la mejor versión de sí mismos, comprometidos con la sociedad."
+                                        </blockquote>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-3 gap-4 text-center">
+<div class="flex flex-col items-center p-4 bg-white/50 dark:bg-slate-800/20 rounded-xl border border-slate-200/80 dark:border-slate-700/80 transition-shadow hover:shadow-md">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">sentiment_satisfied</span>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Empatía</h4>
+</div>
+<div class="flex flex-col items-center p-4 bg-white/50 dark:bg-slate-800/20 rounded-xl border border-slate-200/80 dark:border-slate-700/80 transition-shadow hover:shadow-md">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">lightbulb</span>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Innovación</h4>
+</div>
+<div class="flex flex-col items-center p-4 bg-white/50 dark:bg-slate-800/20 rounded-xl border border-slate-200/80 dark:border-slate-700/80 transition-shadow hover:shadow-md">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">public</span>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Compromiso Social</h4>
+</div>
+</div>
+</div>
+<div class="md:col-span-7">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight tracking-[-0.015em] mb-6">Mi Pasión es tu Crecimiento</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    Más que una coach o una profesora, soy una facilitadora de potencial. Mi carrera, que fusiona la ingeniería industrial con la docencia universitaria y el coaching de negocios, está impulsada por una creencia fundamental: el verdadero aprendizaje transforma. Me dedico a crear un espacio donde la emoción y el conocimiento convergen, porque sé que ahí es donde ocurre la magia del crecimiento.
+                                </p>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                    Mi enfoque no es solo transmitir información, sino despertar tu curiosidad, fortalecer tu liderazgo y darte las herramientas para que no solo alcances tus metas, sino que las superes. Cada sesión y cada clase está diseñada para generar un impacto tangible, convirtiendo tu visión en una estrategia clara y tus desafíos en oportunidades de éxito. Juntos, construiremos el puente entre donde estás y donde sueñas estar.
+                                </p>
+<a class="inline-flex items-center justify-center min-w-[84px] max-w-[480px] cursor-pointer overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-transform hover:scale-105 shadow-lg hover:shadow-primary/40 focus:outline-none focus:ring-4 focus:ring-primary/50" href="#services">
+<span>Conoce mis servicios</span>
+<span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24" id="research">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<span class="text-primary font-semibold">Investigación Aplicada</span>
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight tracking-[-0.015em] mt-2">Datos que Impulsan Decisiones</h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                        Mi estudio sobre el clima laboral no es solo teoría; es una herramienta práctica para que líderes como tú creen equipos de alto rendimiento.
+                    </p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 items-center bg-white/50 dark:bg-slate-800/20 rounded-2xl p-8 md:p-12 border border-slate-200/80 dark:border-slate-700/80 shadow-lg">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Clima Laboral y Desempeño: Una Relación Directa</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6">
+                        El estudio realizado en una entidad financiera en Lima (2024) revela una verdad crucial: invertir en un clima laboral positivo no es un gasto, es una inversión directa en el desempeño y la eficiencia.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl mt-1">insights</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Hallazgo Clave</h4>
+<p class="text-slate-700 dark:text-slate-300">Se demostró una relación positiva moderada entre un buen clima laboral y un alto desempeño de los colaboradores.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-slate-200/50 dark:bg-slate-700/30">
+<span class="material-symbols-outlined text-primary text-3xl mt-1">rocket_launch</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Implicación Práctica</h4>
+<p class="text-slate-700 dark:text-slate-300">Empresas que cultivan un ambiente de apoyo, comunicación y reconocimiento ven un aumento directo en la productividad y resultados.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-background-light dark:bg-background-dark rounded-xl">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl">sentiment_very_satisfied</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Mejor Clima</span>
+</div>
+<div class="text-primary font-bold text-4xl self-center transform -translate-y-2">+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Mayor Desempeño</span>
+</div>
+</div>
+<div class="w-full mt-6 text-center">
+<p class="text-lg font-bold text-slate-800 dark:text-slate-200">La Ecuación del Éxito</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">Un equipo feliz es un equipo productivo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24" id="services">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<span class="text-primary font-semibold">Servicios</span>
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight tracking-[-0.015em] mt-2">Catalizadores de tu Éxito Profesional</h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                        Programas diseñados para desbloquear tu máximo potencial y convertir tus aspiraciones en logros medibles.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative flex flex-col items-center text-center rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800/50 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-primary/50 hover:-translate-y-2">
+<div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-4xl">emoji_events</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Coaching Ejecutivo</h3>
+<p class="text-slate-600 dark:text-slate-400 min-h-[72px] mb-6">Eleva tu liderazgo a un nivel estratégico, tomando decisiones con impacto y guiando a tu equipo hacia la excelencia.</p>
+<a class="mt-auto inline-flex items-center justify-center min-w-[84px] max-w-[480px] cursor-pointer overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity" href="#contact">
+<span>Empezar Tu Transformación</span>
+</a>
+</div>
+<div class="group relative flex flex-col items-center text-center rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800/50 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-primary/50 hover:-translate-y-2">
+<div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-4xl">rocket_launch</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Talleres de Emprendimiento</h3>
+<p class="text-slate-600 dark:text-slate-400 min-h-[72px] mb-6">Convierte tu idea innovadora en un negocio rentable y escalable con herramientas y estrategias validadas.</p>
+<a class="mt-auto inline-flex items-center justify-center min-w-[84px] max-w-[480px] cursor-pointer overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity" href="#contact">
+<span>Construir Tu Futuro</span>
+</a>
+</div>
+<div class="group relative flex flex-col items-center text-center rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800/50 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-primary/50 hover:-translate-y-2">
+<div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-4xl">local_library</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Consultoría Académica</h3>
+<p class="text-slate-600 dark:text-slate-400 min-h-[72px] mb-6">Transforma tu investigación en un aporte significativo, publicable y de alto impacto en tu campo de estudio.</p>
+<a class="mt-auto inline-flex items-center justify-center min-w-[84px] max-w-[480px] cursor-pointer overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity" href="#contact">
+<span>Descubrir Más</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24" id="contact">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<span class="text-primary font-semibold">¿Listo para comenzar?</span>
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight tracking-[-0.015em] mt-2">Da el Siguiente Paso</h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                        Estoy aquí para ayudarte a alcanzar tus metas. Completa el formulario o contáctame a través de mis redes.
+                    </p>
+</div>
+<div class="mx-auto max-w-4xl grid md:grid-cols-2 gap-12 items-start">
+<div class="bg-white/50 dark:bg-slate-800/20 rounded-xl border border-slate-200/80 dark:border-slate-700/80 p-8 shadow-lg">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Envía un Mensaje</h3>
+<form class="space-y-6">
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-slate-800 px-1 text-xs font-medium text-slate-600 dark:text-slate-400" for="name">Nombre</label>
+<input class="block w-full rounded-lg border-slate-300 bg-transparent dark:border-slate-600 shadow-sm focus:border-primary focus:ring-primary sm:text-sm py-3 px-4 transition-shadow duration-200 focus:shadow-md" id="name" name="name" placeholder="Tu Nombre Completo" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-slate-800 px-1 text-xs font-medium text-slate-600 dark:text-slate-400" for="email">Email</label>
+<input class="block w-full rounded-lg border-slate-300 bg-transparent dark:border-slate-600 shadow-sm focus:border-primary focus:ring-primary sm:text-sm py-3 px-4 transition-shadow duration-200 focus:shadow-md" id="email" name="email" placeholder="tu.email@ejemplo.com" required="" type="email"/>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-background-light dark:bg-slate-800 px-1 text-xs font-medium text-slate-600 dark:text-slate-400" for="message">Mensaje</label>
+<textarea class="block w-full rounded-lg border-slate-300 bg-transparent dark:border-slate-600 shadow-sm focus:border-primary focus:ring-primary sm:text-sm py-3 px-4 transition-shadow duration-200 focus:shadow-md" id="message" name="message" placeholder="¿Cómo puedo ayudarte a alcanzar tus metas?" required="" rows="5"></textarea>
+</div>
+<div>
+<button class="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-lg shadow-lg text-base font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300 hover:scale-105" type="submit">
+<span>Reservar Tu Sesión</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<div class="space-y-8 md:mt-16">
+<h3 class="text-2xl font-bold text-center md:text-left text-slate-900 dark:text-white">Otras formas de conectar</h3>
+<div class="flex flex-col gap-6">
+<a class="group flex items-center gap-4 text-left p-4 rounded-lg hover:bg-white/50 dark:hover:bg-slate-800/20 transition-colors" href="#">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">LinkedIn</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">Conecta conmigo en mi red profesional.</p>
+</div>
+</a>
+<a class="group flex items-center gap-4 text-left p-4 rounded-lg hover:bg-white/50 dark:hover:bg-slate-800/20 transition-colors" href="mailto:luisa.avila@email.com">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Email</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">luisa.avila@email.com</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-solid border-slate-200/80 dark:border-slate-700/80 mt-20">
+<div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+<div class="flex justify-center space-x-6 md:order-2">
+<a class="text-slate-400 hover:text-slate-500" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+<div class="mt-8 md:order-1 md:mt-0">
+<p class="text-center text-xs leading-5 text-slate-500">© 2024 Luisa Adriana Avila Bolivar de Andrade Piedra. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
