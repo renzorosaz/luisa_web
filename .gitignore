@@ -1,0 +1,5 @@
+# Archivos de configuración sensibles
+.env
+credentials.json
+protection
+protection
